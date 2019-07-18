@@ -9,16 +9,16 @@
     <?php include './server/scripts/dependencies.inc.php'; ?>
 </head>
 <body>
-    <!-- TODO: 
-            - Favicon 
-    -->
-
-    <div class="container">
+    <div id="app" class="container">
         <div class="row">
-            <div class="card col-6 offset-3 mt-5">
+            <div class="card col-12  mt-5">
                 <div class="card-body">
-                    <h5>Speed Test</h5>
-                    <canvas id="myChart" width="400" height="400"></canvas>
+                    <h4>{{ message }} </h4> <img src="https://img.icons8.com/dusk/64/000000/home.png" style="height: 30px; margin-bottom: .5rem;"> 
+                </div>            
+            </div>
+            <div class="card col-12 mt-5">
+                <div class="card-body">
+                    <line-chart></line-chart>
                 </div>    
             </div>
         </div>
@@ -26,29 +26,63 @@
 
 
     <script>
-        var data = null;
-        
-        var ctx = document.getElementById('myChart').getContext('2d');
-        var myLineChart = new Chart(ctx, {
-            type: 'line',
-            data: {
-                labels: [20, 21, 22, 23],
-                datasets: {
-                    data: [3, 2, 4, 2]
+        Vue.component('line-chart', {
+            extends: VueChartJs.Line,
+            data () {
+                return {
+                    speed_tests: null,
+                    labels: [],
+                    data_array: [],
                 }
             },
-        });
+            mounted () {
+                axios
+                    .get('./server/api.php', {
+                        params: {
+                            request: 'get_speeds',
+                            timespan: 'hourly'
+                        }
+                    })
+                    .then(response => {
+                        console.log(response.data)
 
-        axios.get('./server/api.php', {
-                params: {
-                    request: 'get_speeds',
-                    timespan: 'hourly'
-                }
-            })
-            .then(function (response) {
-                data = response.data;
-                console.log(data);
-            })
+                        response.data.forEach(element => {
+                            this.labels.push(element.hour + "hr, " + element.day + "/" + element.month)
+                            this.data_array.push(parseFloat(element.download))
+                        });
+
+                        this.speed_tests = response.data;
+                    })
+                    .then(() => {
+                        // Render Chart
+                        this.renderChart(
+                            {
+                                labels: this.labels,
+                                datasets: [
+                                    {
+                                        label: 'Speed Tests',
+                                        backgroundColor: '#f87979',
+                                        data: this.data_array
+                                    }
+                                ]
+                            }, 
+                            {
+                                responsive: true, 
+                                maintainAspectRatio: false
+                            }
+                        )
+                    })
+                
+                
+            }
+        })
+    
+        var app = new Vue({
+            el: '#app',
+            data: {
+                message: 'Welcome'
+            }
+        })
     </script>
 </body>
 </html>
