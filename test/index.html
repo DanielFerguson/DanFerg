@@ -1,12 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>New Website</title>
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,900,900i&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://use.typekit.net/mfs6npq.css">
+
+    <!-- FontAwesome -->
+    <script src="https://kit.fontawesome.com/100784d1e8.js"></script>
+
+    <!-- Vue -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    <!-- Vuetify -->
+    <link href="https://cdn.jsdelivr.net/npm/vuetify/dist/vuetify.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/vuetify/dist/vuetify.js"></script>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
+
+<style>
+    html, body {
+        margin: 0px;
+        font-family: 'Roboto', sans-serif;
+    }
+
+    .intro-section {
+        height: 100vh;
+        width: 100vw;
+    }
+
+    #name {
+        text-align: center;
+    }
+
+    #fname {
+        font-family: 'Roboto', sans-serif;
+        font-style: italic;
+        font-weight: bolder;
+        font-size: 2.2em;
+    }
+
+    #lname {
+        font-family: six-hands-brush, sans-serif;
+        font-weight: 800;
+        font-size: 3em;
+        margin-left: -5px;
+    }
+
+    #tag-line {
+        text-align: center;
+        
+        width: 100%;
+
+        position: absolute;
+        top: 50%;
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+    }
+
+    #developer {
+        font-weight: 900;
+        font-style: italic;
+        font-size: 2.4rem;
+
+        display: block;
+    }
+
+    #seperator {
+        font-family: six-hands-brush, sans-serif;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 4rem;
+
+        display: block;
+    }
+
+    #designer {
+        font-family: six-hands-brush, sans-serif;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 3.5rem;
+
+        display: block;
+        margin-top: -10px;
+    }
+
+    .work-section {
+        text-align: center;
+    }
+</style>
+
 <body>
-    <h1>Here is where the new portfolio will go.</h1>
+    <div class="app">
+        <!-- Intro Section -->
+        <div class="intro-section">
+            <div id="name" class="pt-3">
+                <span id="fname">dan</span>
+                <span id="lname">ferg</span>
+            </div>
+            
+            <div id="tag-line">
+                <span id="developer">Developer</span>
+                <span id="seperator">X</span>
+                <span id="designer">Designer</span>
+            </div>
+        </div>
+        
+        <!-- Work Section -->
+        <div class="work-section">
+            <h3>My Work</h3>
+        </div>
+    </div>
 </body>
+
+<script>
+    var app = Vue({
+        el: 'app'
+    })
+</script>
+
 </html>
