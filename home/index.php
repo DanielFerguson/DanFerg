@@ -39,7 +39,7 @@
                 axios
                     .get('./server/api.php', {
                         params: {
-                            request: 'get_speeds',
+                            request: 'get_speeds_hourly',
                             timespan: 'hourly'
                         }
                     })
