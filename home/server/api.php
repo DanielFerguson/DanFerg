@@ -5,7 +5,7 @@ if (isset($_REQUEST['request'])) {
     $request = $_REQUEST['request'];
     
     switch ($request) {
-        case 'get_speeds':
+        case 'get_speeds_hourly':
             if ($_REQUEST['timespan'] == 'hourly') {
                 $connection = "host=". DB_HOST . " port=" . DB_PORT . " dbname=" . DB_DBNM . " user=" . DB_USER . " password=" . DB_PASS;
     
@@ -15,9 +15,7 @@ if (isset($_REQUEST['request'])) {
                     die('Error: Could not connect to the database.');
                 }
     
-                $sql  = 'SELECT avg(download / 1000000) as download, EXTRACT(year from time) as year, EXTRACT(month from time) as month,';
-                $sql .= ' EXTRACT(day from time) as day, EXTRACT(hour from time) as hour FROM speed_test GROUP BY year, month, day, hour';
-                $sql .= ' ORDER BY year, month, day, hour';
+                $sql  = 'SELECT * FROM speeds_total_hourly';
     
                 $ret = pg_query($db, $sql);
                 $result = pg_fetch_all($ret);
