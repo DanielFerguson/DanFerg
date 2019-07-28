@@ -10,13 +10,60 @@
 </head>
 <body>
     <div id="app" class="container">
-        <div class="row">
-            <div class="card col-12  mt-5">
+        <div class="row mt-5">
+            <div class="card col-12">
                 <div class="card-body">
                     <h4>{{ message }} </h4> <img src="https://img.icons8.com/dusk/64/000000/home.png" style="height: 30px; margin-bottom: .5rem;"> 
                 </div>            
             </div>
-            <div class="card col-12 mt-5">
+        </div>
+
+        <!-- Statistics -->
+        <div class="row mt-5">
+            <div class="col-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Evening Speeds</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Hourly Average</h6>
+                        
+                        <div class="card-text">
+                            This is some text within a card body.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Today</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Hourly Average</h6>
+                        
+                        <div class="card-text">
+                            This is some text within a card body.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">This Week</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Daily Average</h6>
+                        
+                        <div class="card-text">
+                            This is some text within a card body.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+        <!-- Visualisation -->
+        <div class="row mt-5">
+            <div class="card col-12">
                 <div class="card-body">
                     <line-chart></line-chart>
                 </div>    
