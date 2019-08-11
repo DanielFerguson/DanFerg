@@ -57,13 +57,15 @@
             </v-tab>
           </v-tabs>
 
-          <v-tabs-items class="transparent" v-model="tab">
-            <v-tab-item v-for="(tab, index) in tabs" :key="index">
-              <v-card class="transparent" flat>
-                <v-card-text>{{ tab.items }}</v-card-text>
-              </v-card>
-            </v-tab-item>
-          </v-tabs-items>
+          <v-container grid-list-md>
+            <v-layout row wrap align-center class="text-center">
+              <v-flex v-for="(tab, index) in tabs[tab]" :key="index" xs12 md4>
+                <v-item>
+                  {{ tab }}
+                </v-item>
+              </v-flex>
+            </v-layout>
+          </v-container>
         </v-container>
 
         <!-- About Me -->
@@ -95,9 +97,6 @@
               </v-card>
             </v-timeline-item>
           </v-timeline>
-          <p class="text-center" style="color: #1976d2 !important">
-            <a href="#" style="text-decoration: none;">download my full cv</a>
-          </p>
         </v-container>
 
         <!-- Contact Me -->
