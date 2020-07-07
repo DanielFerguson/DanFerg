@@ -3,10 +3,13 @@ const cssmin = require('gulp-cssmin')
 const uglify = require('gulp-uglify')
 const rename = require('gulp-rename')
 const sourcemaps = require('gulp-sourcemaps')
-const autoprefixer = require('gulp-autoprefixer')
+const uncss = require('postcss-uncss')
 const concat = require('gulp-concat')
 const image = require('gulp-image')
 const htmlmin = require('gulp-htmlmin')
+const postcss = require('gulp-postcss')
+const autoprefixer = require('autoprefixer')
+const cssnano = require('cssnano')
 
 function images(cb) {
   gulp
@@ -30,13 +33,15 @@ function images(cb) {
 }
 
 function css(cb) {
+  var plugins = [
+    autoprefixer(),
+    uncss({ html: ['./src/index.html'], ignore: ['.list-group-item.active'] }),
+    cssnano()
+  ]
+
   gulp
     .src('./src/**/*.css')
-    .pipe(
-      autoprefixer({
-        cascade: false
-      })
-    )
+    .pipe(postcss(plugins))
     .pipe(cssmin())
     .pipe(sourcemaps.init())
     .pipe(concat('style.min.css'))
@@ -62,4 +67,5 @@ function html(cb) {
   cb()
 }
 
-exports.build = gulp.parallel(js, css, images, html)
+// exports.build = gulp.parallel(js, css, images, html)
+exports.build = gulp.parallel(css, html)
