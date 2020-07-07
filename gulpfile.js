@@ -67,5 +67,4 @@ function html(cb) {
   cb()
 }
 
-// exports.build = gulp.parallel(js, css, images, html)
-exports.build = gulp.parallel(css, html)
+exports.build = gulp.parallel(js, css, images, html)
