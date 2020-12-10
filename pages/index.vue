@@ -1,78 +1,347 @@
 <template>
-  <div class="container">
-    <div>
-      <Logo />
-      <h1 class="title">
-        danferg
-      </h1>
-      <div class="links">
+  <div>
+    <div class="flex flex-col items-center justify-center w-screen h-screen">
+      <img
+        src="/headshot.jpg"
+        height="250"
+        width="250"
+        class="mt-12"
+        alt="Daniel Ferguson"
+      />
+      <h2 class="mt-6">Hey! I'm Dan 👋</h2>
+      <h1>I’m a social entrepreneur</h1>
+      <p class="mt-3 text-center">
+        solutions architect and software developer; <br />
+        seeking to create digitally enabled, <br />
+        scalable <b>change for good</b>.
+      </p>
+      <a
+        href="#"
+        class="inline-block px-6 py-4 mt-12 text-2xl font-bold text-white bg-gray-900 rounded-full"
+      >
+        Let's Talk! 🤙
+      </a>
+
+      <div class="flex mt-12 space-x-6">
+        <a href="#">Skills</a>
+        <a href="#">Articles</a>
+        <a href="#">Talks</a>
+        <a href="#">Resume</a>
+        <a href="#">Contact</a>
+      </div>
+    </div>
+
+    <div class="w-screen px-16 mx-auto mt-24">
+      <div class="grid grid-cols-5 gap-8 bg-white">
+        <div class="col-span-2 grid-cell">
+          <h2>Helping Group</h2>
+          <p>
+            Helping Group’s mission is to combat current events with digital
+            solutions so the Australian people can connect and thrive together.
+          </p>
+        </div>
+
+        <div class="col-span-2 grid-cell">
+          <h2>Yoogle</h2>
+          <p>
+            A captions-based search engine and video caption ingestion engine.
+          </p>
+        </div>
+
+        <div class="col-span-1 row-span-2 grid-cell">
+          <h2>ILI</h2>
+          <p>
+            A holistic data-driven approach to make better future planning
+            decisions for land zoning. An index based on soil characteristics,
+            rainfall and the distance from the major urban centres of farmland…
+          </p>
+        </div>
+
+        <div class="col-span-2 grid-cell">
+          <h2>Swin Lead</h2>
+          <p>
+            A case study into the innovation and leadership opportunities and
+            barriers at Swinburne University.
+          </p>
+        </div>
+
+        <div class="col-span-2 grid-cell">
+          <h2>ML Traffic Predictor</h2>
+          <p>
+            A privacy-focused client side alternative to Google Maps.
+          </p>
+        </div>
+
+        <div class="col-span-1 grid-cell">
+          <h2>Title</h2>
+          <p>
+            A privacy-focused client side alternative to Google Maps.
+          </p>
+        </div>
+
+        <div class="col-span-3 grid-cell">
+          <h2>Title</h2>
+          <p>
+            A privacy-focused client side alternative to Google Maps.
+          </p>
+        </div>
+
+        <div class="col-span-1 grid-cell">
+          <h2>Title</h2>
+          <p>
+            A privacy-focused client side alternative to Google Maps.
+          </p>
+        </div>
+      </div>
+
+      <p class="mt-6 text-center">
+        See more on
         <a
-          href="https://nuxtjs.org/"
+          href="https://helping.group"
+          class="font-bold"
           target="_blank"
           rel="noopener noreferrer"
-          class="button--green"
-        >
-          Documentation
-        </a>
+          >helping.group</a
+        >,
         <a
-          href="https://github.com/nuxt/nuxt.js"
+          href="https://linkedin.com/in/danferg"
+          class="font-bold"
           target="_blank"
           rel="noopener noreferrer"
-          class="button--grey"
+          >LinkedIn</a
         >
-          GitHub
-        </a>
+        or
+        <a
+          href="https://github.com/DanielFerguson"
+          class="font-bold"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Github</a
+        >
+      </p>
+
+      <h2 class="mt-24">I’m quite a diverse dude.</h2>
+      <p>
+        I like to be across the board, so I have the ability to see the
+        <em>whole</em>
+        picture
+      </p>
+
+      <div class="flex mt-8">
+        <div class="w-1/2">
+          <h3>Experience</h3>
+
+          <div class="flex flex-col mt-6 space-y-6">
+            <div>
+              <h4>Helping Group</h4>
+              <p class="mt-2">
+                Founder, President <br />
+                <em class="text-sm">Jan 2020 - Present</em>
+              </p>
+            </div>
+
+            <div>
+              <h4>Centre for eResearch and Digital Innovation</h4>
+              <p class="mt-2">
+                Migrations Officer <br />
+                <em class="text-sm">Jan 2021 - Present</em>
+              </p>
+              <p class="mt-2">
+                Technical Officer <br />
+                <em class="text-sm">Feb 2019 - Dec 2020</em>
+              </p>
+            </div>
+
+            <div>
+              <h4>Lawrencia Cycles</h4>
+              <p class="mt-2">
+                Sales Assistant <br />
+                <em class="text-sm">Mar 2017 - Dec 2018</em>
+              </p>
+            </div>
+          </div>
+
+          <h3 class="mt-12">Education</h3>
+
+          <div class="flex flex-col mt-6 space-y-6">
+            <div>
+              <h4>Swinburne University of Technology</h4>
+              <p class="mt-2">
+                Bachelor of Computer Science (Software Development) <br />
+                <em class="text-sm">Graduating 2021</em>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="w-1/2">
+          <h3>Awards</h3>
+
+          <div class="flex flex-col mt-6 space-y-6">
+            <div v-for="i in 5" :key="i">
+              <h4>Award Here</h4>
+              <p class="mt-2">
+                Blah blah blah <br />
+                <em class="text-sm">Date awarded</em>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <p class="mt-6">
+        Please see more at my
+        <a
+          href="https://linkedin.com/in/danferg"
+          target="_blank"
+          rel="noopener noreferrer"
+          >LinkedIn</a
+        >
+      </p>
+
+      <h2 class="mt-24">
+        And every now and then I write about what I’m up too.
+      </h2>
+      <p>
+        It’s another great way to share knowledge, and for me to remember where
+        I’ve been and what I’ve done.
+      </p>
+
+      <div>
+        Articles here.
+      </div>
+
+      <h2 class="mt-24">
+        That’s it for me - now it’s your turn!
+      </h2>
+      <p>
+        If you’ve made it this far, thanks! I’d love to chat! Reach me though…
+      </p>
+
+      <div class="flex flex-col items-center justify-center">
+        <div class="mt-6 text-5xl">👋 🤙</div>
+        <a href="mailto:dan@helpinggroup.com.au" class="mt-3 text-xl font-bold"
+          >dan@helpinggroup.com.au</a
+        >
+        <div class="flex mt-6 mb-12 space-x-6 align-center">
+          <a
+            href="https://twitter.com/thedannyferg"
+            class="flex items-center justify-center inline-block w-16 h-16 bg-blue-200 rounded-full"
+          >
+            <svg
+              aria-hidden="true"
+              focusable="false"
+              data-prefix="fab"
+              data-icon="twitter"
+              class="h-8 text-blue-500"
+              role="img"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 512 512"
+            >
+              <path
+                fill="currentColor"
+                d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"
+              ></path>
+            </svg>
+          </a>
+          <a
+            href="https://linkedin.com/in/danferg"
+            class="flex items-center justify-center inline-block w-16 h-16 bg-green-200 rounded-full"
+          >
+            <svg
+              aria-hidden="true"
+              focusable="false"
+              data-prefix="fab"
+              data-icon="linkedin-in"
+              class="h-8 text-green-500"
+              role="img"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 448 512"
+            >
+              <path
+                fill="currentColor"
+                d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"
+              ></path>
+            </svg>
+          </a>
+          <a
+            href="https://github.com/DanielFerguson"
+            class="flex items-center justify-center inline-block w-16 h-16 bg-orange-200 rounded-full"
+          >
+            <svg
+              aria-hidden="true"
+              focusable="false"
+              data-prefix="fab"
+              data-icon="github"
+              class="h-8 text-orange-500"
+              role="img"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 496 512"
+            >
+              <path
+                fill="currentColor"
+                d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"
+              ></path>
+            </svg>
+          </a>
+        </div>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-export default {}
+export default {
+  data() {
+    return {
+      awards: [
+        {
+          title: "",
+          from: "",
+          date: ""
+        }
+      ],
+      skills: [
+        "Software Development",
+        "Solutions Architecture",
+        "Entrepreneurship",
+        "Cloud Architecture",
+        "Leadership"
+      ],
+      tools: [
+        "Laravel",
+        "VueJS",
+        "Mapbox / Leaflet",
+        "Tensorflow",
+        "AWS",
+        "Python",
+        "Dart / Flutter",
+        "Docker",
+        "C# .Net"
+      ]
+    };
+  }
+};
 </script>
 
-<style>
-/* Sample `apply` at-rules with Tailwind CSS
-.container {
-@apply min-h-screen flex justify-center items-center text-center mx-auto;
-}
-*/
-.container {
-  margin: 0 auto;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+<style scoped>
+h1 {
+  @apply text-6xl font-bold;
 }
 
-.title {
-  font-family:
-    'Quicksand',
-    'Source Sans Pro',
-    -apple-system,
-    BlinkMacSystemFont,
-    'Segoe UI',
-    Roboto,
-    'Helvetica Neue',
-    Arial,
-    sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
+h2 {
+  @apply text-4xl font-bold;
 }
 
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
+h3 {
+  @apply text-2xl font-bold;
 }
 
-.links {
-  padding-top: 15px;
+h4 {
+  @apply text-lg font-bold;
+}
+
+.grid-cell {
+  @apply p-8 bg-blue-100 rounded-xl;
 }
 </style>
