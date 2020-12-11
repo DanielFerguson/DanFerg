@@ -2,7 +2,9 @@ export default {
   target: "static",
   head: {
     titleTemplate: titleChunk => {
-      return titleChunk ? `${titleChunk} | Dan Ferguson` : "Dan Ferguson";
+      return titleChunk
+        ? `${titleChunk} | Dan Ferguson - social entrepreneur seeking to create change for good.`
+        : "Dan Ferguson - social entrepreneur seeking to create change for good.";
     },
     meta: [
       { charset: "utf-8" },
