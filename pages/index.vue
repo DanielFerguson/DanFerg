@@ -131,14 +131,14 @@
           <h3>Tools</h3>
 
           <div class="grid grid-cols-2 mt-6 gap-6">
-            <div v-for="tool in tools" :key="tool">
+            <div v-for="tool in tools" :key="tool.name">
               <i :class="tool.icon" class="mr-2"></i> {{ tool.name }}
             </div>
           </div>
 
           <h3 class="mt-12">Skills</h3>
           <div class="flex flex-col mt-6 space-y-6">
-            <div v-for="skill in skills" :key="skill">
+            <div v-for="skill in skills" :key="skill.name">
               <i :class="skill.icon" class="mr-2"></i> {{ skill.name }}
             </div>
           </div>
@@ -163,51 +163,44 @@
         It’s another great way to share knowledge, and for me to remember where
         I’ve been and what I’ve done.
       </p>
-      <div class="mt-8 flex space-x-8">
-        <nuxt-link :to="articles[0].path" class="w-1/2">
+      <div class="grid grid-cols-2 gap-8 mt-8">
+        <nuxt-link
+          v-for="(article, index) in articles"
+          :key="index"
+          :to="article.path"
+          :class="
+            index == 0 ? 'row-span-5 col-span-1' : 'grid grid-cols-4 gap-4'
+          "
+        >
           <img
-            class="w-full rounded-xl object-cover"
+            class="w-full object-cover rounded-xl"
+            :class="index == 0 ? '' : 'col-span-1 h-16'"
             style="max-height: 16rem;"
-            :src="'/images/' + articles[0].featured_image"
-            :alt="articles[0].featured_image"
+            :src="'/images/' + article.featured_image"
+            :alt="article.featured_image"
           />
-          <div class="mt-4">
-            <h3>{{ articles[0].title }}</h3>
-            <p class="mt-2">{{ articles[0].description }} <br /></p>
+          <div v-if="index == 0" class="mt-4">
+            <h3>{{ article.title }}</h3>
+            <p class="mt-2">{{ article.description }} <br /></p>
             <p class="mt-2">
-              <em class="text-sm">{{ dateFormat(articles[0].createdAt) }}</em>
+              <em class="text-sm">{{ dateFormat(article.createdAt) }}</em>
             </p>
           </div>
+          <h4 v-else class="col-span-3 flex items-center h-16">
+            {{ article.title }}
+          </h4>
         </nuxt-link>
-        <div class="w-1/2 flex flex-col space-y-6">
-          <nuxt-link
-            :to="article.path"
-            class="grid grid-cols-4 gap-3"
-            v-for="article in articles"
-            :key="article.title"
-          >
-            <img
-              class="col-span-1 h-16 bg-green-400 rounded-xl w-full object-cover"
-              :src="'/images/' + article.featured_image"
-              :alt="article.featured_image"
-            />
-            <div class="col-span-3 flex items-center h-16">
-              <h4>{{ article.title }}</h4>
-            </div>
-          </nuxt-link>
-
-          <nuxt-link
-            to="/articles"
-            class="inline-block px-3 mt-12 text-lg h-16 flex items-center font-bold text-white bg-gray-900 rounded-lg hover:shadow-lg transition-shadow duration-75 ease-in-out"
-            >Read More</nuxt-link
-          >
-        </div>
+        <nuxt-link
+          to="/articles"
+          class="inline-block px-3 text-lg h-16 flex items-center font-bold text-white bg-gray-900 rounded-lg hover:shadow-lg transition-shadow duration-75 ease-in-out"
+          >Read More</nuxt-link
+        >
       </div>
 
       <!-- Contact -->
       <h2 id="contact" class="mt-24">That’s it for me - now it’s your turn!</h2>
       <p>
-        If you’ve made it this far, thanks! I’d love to chat! Reach me though…
+        If you’ve made it this far, thanks! I’d love to chat! Reach me through…
       </p>
       <div class="flex flex-col items-center justify-center my-16">
         <div class="mt-6 text-5xl">👋 🤙</div>
@@ -274,11 +267,14 @@ export default {
       .sortBy("priority", "asc")
       .only(["title", "description", "priority"])
       .fetch();
+
     return { articles, projects };
   },
 
   data() {
     return {
+      articles: [],
+      projects: [],
       gridList: [
         "col-span-2",
         "col-span-3",
@@ -348,6 +344,12 @@ export default {
         }
       ]
     };
+  },
+
+  computed: {
+    firstArticle() {
+      return this.articles ? this.articles[0] : null;
+    }
   },
 
   methods: {
