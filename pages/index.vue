@@ -34,7 +34,7 @@
     <div class="xl:w-4/5 2xl:w-3/5 px-16 mx-auto mt-24">
       <!-- Projects -->
       <div id="projects" class="grid grid-cols-5 gap-8 bg-white">
-        <nuxt-link
+        <NuxtLink
           v-for="(project, index) in projects"
           :key="project.title"
           class="grid-cell hover:shadow-lg transition-shadow duration-75 ease-in-out"
@@ -43,7 +43,7 @@
         >
           <h2 class="leading-10">{{ project.title }}</h2>
           <p class="mt-2">{{ project.description }}</p>
-        </nuxt-link>
+        </NuxtLink>
       </div>
       <p class="mt-6 text-center">
         See more on
@@ -164,7 +164,7 @@
         I’ve been and what I’ve done.
       </p>
       <div class="grid grid-cols-2 gap-8 mt-8">
-        <nuxt-link
+        <NuxtLink
           v-for="(article, index) in articles"
           :key="index"
           :to="article.path"
@@ -189,11 +189,11 @@
           <h4 v-else class="col-span-3 flex items-center h-16">
             {{ article.title }}
           </h4>
-        </nuxt-link>
-        <nuxt-link
+        </NuxtLink>
+        <NuxtLink
           to="/articles"
           class="inline-block px-3 text-lg h-16 flex items-center font-bold text-white bg-gray-900 rounded-lg hover:shadow-lg transition-shadow duration-75 ease-in-out"
-          >Read More</nuxt-link
+          >Read More</NuxtLink
         >
       </div>
 
@@ -260,12 +260,12 @@ const months = [
 export default {
   async asyncData({ $content }) {
     const articles = await $content("articles")
-      .only(["title", "description", "createdAt", "featured_image"])
+      .only(["title", "description", "createdAt", "featured_image", "path"])
       .fetch();
 
     const projects = await $content("projects")
       .sortBy("priority", "asc")
-      .only(["title", "description", "priority"])
+      .only(["title", "description", "priority", "path"])
       .fetch();
 
     return { articles, projects };

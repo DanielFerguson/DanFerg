@@ -1,3 +1,5 @@
+import axios from "axios";
+
 export default {
   target: "static",
   head: {
@@ -17,5 +19,16 @@ export default {
   buildModules: ["@nuxtjs/tailwindcss"],
   modules: ["@nuxt/content"],
   content: {},
-  build: {}
+  build: {},
+  generate: {
+    async routes() {
+      const { $content } = require("@nuxt/content");
+
+      const files = await $content({ deep: true })
+        .only(["path"])
+        .fetch();
+
+      return files.map(file => (file.path === "/index" ? "/" : file.path));
+    }
+  }
 };

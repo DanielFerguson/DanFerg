@@ -5,5 +5,4 @@ featured_image: mikey-harris-kw0z6RyvC0s-unsplash.jpg
 ---
 
 - How does digital soverignty solve the issue of knowing who can accept funding?
-- Why decentralised bitcoin?
-- 
+- Why decentralised cryptocurrency?

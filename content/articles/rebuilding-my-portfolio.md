@@ -8,7 +8,7 @@ So, for those of you who had the unfortunate dealings with my previous website -
 
 I set out to recreate my previous website, this time with a little more flare, a little more pizzaze and a **much** better method of updating content.
 
-Enter **Nuxt** 
+Enter **Nuxt**
 
 - Nuxt, nuxt/@content, Tailwind
 - Testing with web.dev
