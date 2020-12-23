@@ -36,7 +36,7 @@
         Let's Talk! 🤙
       </a>
 
-      <div class="flex my-12 lg:my-20 space-x-6">
+      <div class="flex text-xl font-medium my-12 lg:my-20 space-x-6">
         <a href="#projects">Projects</a>
         <a href="#skills">Skills</a>
         <a href="#articles">Articles</a>
