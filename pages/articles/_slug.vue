@@ -9,6 +9,7 @@
       >
         {{ article.title }}
       </h1>
+
       <nuxt-content
         class="prose prose-sm sm:prose lg:prose-lg mx-auto mt-12"
         :document="article"

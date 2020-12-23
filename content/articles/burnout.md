@@ -3,7 +3,10 @@ title: Burnout; let's talk about it.
 description: This year has been the wildest, most productive, most humbling year of my life to date. However, it also brought some drawbacks.
 featured_image: adi-yusuf-mRA5vq9oBH4-unsplash.jpg
 published: true
+date: 12-13-2020
 ---
+
+<img class="h-64 w-full object-cover rounded-xl shadow" src="/images/adi-yusuf-mRA5vq9oBH4-unsplash.jpg" />
 
 # Preface
 

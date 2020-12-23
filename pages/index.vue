@@ -58,7 +58,7 @@
         </a>
       </div>
       <p class="mt-6 text-center">
-        See more on
+        See more of my projects at
         <a
           href="https://helping.group"
           class="font-bold"
@@ -168,16 +168,17 @@
       </p>
 
       <h2 id="articles" class="text-2xl lg:text-4xl font-bold mt-12 lg:mt-20">
-        And every now and then I write about what I’m up too.
+        And every now and then I like to write.
       </h2>
       <p>
-        It’s another great way to share knowledge, and for me to remember where
-        I’ve been and what I’ve done.
+        It’s a great way to share knowledge, remember how far we've come and
+        <br />
+        create dialogue on topics that interest me or are near to my heart.
       </p>
       <div class="flex flex-col md:flex-row gap-4 mt-8">
         <NuxtLink
           :to="firstArticle.path"
-          class="shadow rounded-xl w-full md:w-1/2"
+          class="shadow rounded-xl w-full md:w-1/2 hover:shadow-lg transition-shadow duration-75 ease-in-out"
         >
           <img
             class="w-full object-cover rounded-t-xl"
@@ -187,9 +188,9 @@
           />
           <div class="p-4">
             <h3 class="text-lg font-bold">{{ firstArticle.title }}</h3>
-            <p class="mt-2">{{ firstArticle.description }} <br /></p>
+            <p class="mt-2" v-html="firstArticle.description"></p>
             <p class="mt-2">
-              <em class="text-sm">{{ dateFormat(firstArticle.createdAt) }}</em>
+              <em class="text-sm">{{ dateFormat(firstArticle.date) }}</em>
             </p>
           </div>
         </NuxtLink>
@@ -199,7 +200,7 @@
             v-for="article in otherArticles"
             :key="article.title"
             :to="article.path"
-            class="grid grid-cols-5 shadow rounded-xl"
+            class="grid grid-cols-5 shadow rounded-xl hover:shadow-lg transition-shadow duration-75 ease-in-out"
           >
             <img
               class="col-span-1 object-cover h-full w-full rounded-l-xl"
@@ -210,7 +211,7 @@
               <h4 class="font-bold">
                 {{ article.title }}
               </h4>
-              <em class="mt-1 text-sm">{{ dateFormat(article.createdAt) }}</em>
+              <em class="mt-1 text-sm">{{ dateFormat(article.date) }}</em>
             </div>
           </NuxtLink>
 
@@ -291,9 +292,9 @@ const months = [
 export default {
   async asyncData({ $content }) {
     const articles = await $content("articles")
-      .sortBy("createdAt", "desc")
+      .sortBy("date", "desc")
       .where({ published: true })
-      .only(["title", "description", "createdAt", "featured_image", "path"])
+      .only(["title", "description", "date", "featured_image", "path"])
       .fetch();
 
     return { articles };

@@ -27,9 +27,9 @@
             <h2 class="text-4xl font-bold" style="line-height: 3rem;">
               {{ article.title }}
             </h2>
-            <p class="mt-2">{{ article.description }}</p>
+            <p class="mt-2" v-html="article.description"></p>
             <p class="mt-2">
-              <em class="text-sm">{{ dateFormat(article.createdAt) }}</em>
+              <em class="text-sm">{{ dateFormat(article.date) }}</em>
             </p>
           </div>
         </NuxtLink>
@@ -70,9 +70,9 @@ export default {
 
   async asyncData({ $content, params }) {
     const articles = await $content("articles")
-      .sortBy("createdAt", "desc")
+      .sortBy("date", "desc")
       .where({ published: true })
-      .only(["title", "description", "createdAt", "featured_image", "path"])
+      .only(["title", "description", "date", "featured_image", "path"])
       .fetch();
 
     return { articles };
