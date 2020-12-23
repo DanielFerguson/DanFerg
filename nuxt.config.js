@@ -25,8 +25,15 @@ export default {
   modules: ["@nuxt/content"],
   content: {},
   build: {
-    cssSourceMap: true
+    cssSourceMap: true,
+    extend(config, { isDev, isClient, loaders: { vue } }) {
+      if (isClient) {
+        vue.transformAssetUrls.img = ["data-src", "src"];
+        vue.transformAssetUrls.source = ["data-srcset", "srcset"];
+      }
+    }
   },
+  plugins: ["~/plugins/vue-lazysizes.client.js"],
   generate: {
     async routes() {
       const { $content } = require("@nuxt/content");

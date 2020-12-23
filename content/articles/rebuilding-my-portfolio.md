@@ -90,3 +90,12 @@ Honestly, whatever works for you, stick with it. 👍
 Unfortunately, we didn’t beat the previous website’s scores (more like 🥈). That’s alright, room to improve! However, as I said at the start of the article, I am over the moon with how this project has turned out. Definitely went for a little longer than I would have hoped, but what should have I expected coming into the end of the year?
 
 I look forward to the next interactions of the website. I’ll be working on increasing the web.dev scores to at least be all in the green, if not be scores of 100 across the board.
+
+## Forget that nonsense, go for gold! (🥇!)
+
+<img class="w-full object-cover rounded-xl shadow" src="/images/website-v3-upgrades.png" />
+<em class="text-sm">The web.dev scores of the latest upgrades to the website</em>
+
+I couldn't go to sleep knowing that I could do better; and did I ever! After doing some reading on both what Google gives SEO kudos to, and generally good practise for things like accessibility with aria, etc. I cracked the 100% mark!
+
+For those who haven't ever had this achievement (don't worry, neither had I until now), the Lighthouse testing window panel starts to fire off fireworks in celebration of being a good web citizen! Woo for lazyloading and awesome compression!

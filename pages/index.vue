@@ -200,12 +200,14 @@
           class="shadow rounded-xl w-full md:w-1/2 hover:shadow-lg transition-shadow duration-75 ease-in-out"
           :aria-label="`A link to my article, titled ${firstArticle.title}`"
         >
-          <img
-            class="w-full object-cover rounded-t-xl"
-            style="max-height: 16rem;"
-            :src="'/images/' + firstArticle.featured_image"
-            :alt="firstArticle.featured_image"
-          />
+          <figure class="picture">
+            <img
+              :data-src="'/images/' + firstArticle.featured_image"
+              :alt="firstArticle.featured_image"
+              class="lazyload w-full object-cover rounded-t-xl"
+              style="max-height: 16rem;"
+            />
+          </figure>
           <div class="p-4">
             <h3 class="text-lg font-bold">{{ firstArticle.title }}</h3>
             <p class="mt-2" v-html="firstArticle.description"></p>
@@ -223,11 +225,13 @@
             :aria-label="`A link to my article, titled ${firstArticle.title}`"
             class="grid grid-cols-5 shadow rounded-xl hover:shadow-lg transition-shadow duration-75 ease-in-out"
           >
-            <img
-              class="col-span-1 object-cover h-full w-full rounded-l-xl"
-              :src="'/images/' + article.featured_image"
-              :alt="article.featured_image"
-            />
+            <figure class="picture">
+              <img
+                :data-src="'/images/' + article.featured_image"
+                :alt="article.featured_image"
+                class="lazyload col-span-1 object-cover h-full w-full rounded-l-xl"
+              />
+            </figure>
             <div class="col-span-4 p-4 flex flex-col justify-center">
               <h4 class="font-bold">
                 {{ article.title }}
