@@ -2,11 +2,17 @@
   <div>
     <nav-bar />
 
-    <article class="xl:w-4/5 2xl:w-3/5 px-16 mx-auto">
-      <h1 class="mt-8 text-center" style="line-height: 5rem;">
+    <article class="px-16 mx-auto mb-24">
+      <h1
+        class="text-5xl font-bold mt-8 text-center"
+        style="line-height: 4rem;"
+      >
         {{ article.title }}
       </h1>
-      <nuxt-content class="mt-8" :document="article" />
+      <nuxt-content
+        class="prose prose-sm sm:prose lg:prose-lg mx-auto mt-12"
+        :document="article"
+      />
     </article>
   </div>
 </template>

@@ -1,7 +1,8 @@
 ---
-title: Rebuilding this website!
+title: Rebuilding this website
 description: "2020 has brought many changes, not excuding a number of changes to the tools that I use on a day to day basis."
 featured_image: mikey-harris-kw0z6RyvC0s-unsplash.jpg
+published: false
 ---
 
 So, for those of you who had the unfortunate dealings with my previous website - I'm sorry. 😂

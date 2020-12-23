@@ -5,8 +5,8 @@ export default {
   head: {
     titleTemplate: titleChunk => {
       return titleChunk
-        ? `${titleChunk} | Dan Ferguson - social entrepreneur seeking to create change for good.`
-        : "Dan Ferguson - social entrepreneur seeking to create change for good.";
+        ? `${titleChunk} | Dan Ferguson - Social entrepreneur seeking to create change for good.`
+        : "Dan Ferguson - Social entrepreneur seeking to create change for good.";
     },
     meta: [
       { charset: "utf-8" },

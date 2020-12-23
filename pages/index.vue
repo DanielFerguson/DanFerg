@@ -1,20 +1,29 @@
 <template>
   <div class="text-gray-900">
-    <div class="flex flex-col items-center justify-center w-screen h-screen">
+    <div class="flex flex-col items-center w-4/5 mx-auto text-center">
       <img
         src="/headshot.jpg"
-        height="250"
-        width="250"
-        class="mt-12"
+        class="mt-12 lg:mt-48 h-48"
         alt="Daniel Ferguson"
       />
-      <h2 class="mt-6">Hey! I'm Dan 👋</h2>
-      <h1>I’m a social entrepreneur</h1>
-      <p class="mt-3 text-center">
-        solutions architect and software developer; <br />
-        seeking to create digitally enabled, <br />
-        scalable <b>change for good</b>.
+      <h2 class="text-4xl font-bold mt-6">Hey! I'm Dan 👋</h2>
+      <h1 class="text-5xl font-bold leading-10 my-8">
+        I’m a
+        <span
+          class="bg-gradient-to-r from-teal-400 to-purple-500 text-white px-2 py-1"
+          >social entrepreneur</span
+        >
+      </h1>
+      <p class="text-center text-lg">
+        solutions architect and software developer;
+        <br class="hidden md:block" />
+        seeking to create digitally enabled, scalable
+        <span
+          class="text-white font-bold bg-gradient-to-r from-pink-500 to-yellow-600 p-1"
+          >change for good.</span
+        >
       </p>
+
       <a
         href="#contact"
         class="inline-block px-6 py-4 mt-12 text-2xl font-bold text-white bg-gray-900 rounded-full hover:shadow-lg transition-shadow duration-75 ease-in-out"
@@ -22,27 +31,24 @@
         Let's Talk! 🤙
       </a>
 
-      <div class="flex mt-12 space-x-6">
+      <div class="flex my-12 lg:my-20 space-x-6">
         <a href="#projects">Projects</a>
         <a href="#skills">Skills</a>
         <a href="#articles">Articles</a>
         <a href="#talks">Talks</a>
-        <a href="#contact">Contact</a>
       </div>
     </div>
 
-    <div class="xl:w-4/5 2xl:w-3/5 px-16 mx-auto mt-24">
-      <!-- Projects -->
-      <div id="projects" class="grid grid-cols-5 gap-8 bg-white">
+    <div class="xl:w-3/5 px-4 xl:px-16 mx-auto">
+      <div id="projects" class="grid grid-cols-6 gap-4 bg-white">
         <NuxtLink
-          v-for="(project, index) in projects"
+          v-for="project in projects"
           :key="project.title"
-          class="grid-cell hover:shadow-lg transition-shadow duration-75 ease-in-out"
-          :class="gridList[index]"
+          class="col-span-6 md:col-span-3 lg:col-span-2 grid-cell hover:shadow-lg transition-shadow duration-75 ease-in-out col-span-5"
           :to="project.path"
         >
-          <h2 class="leading-10">{{ project.title }}</h2>
-          <p class="mt-2">{{ project.description }}</p>
+          <h2 class="text-2xl font-bold leading-10">{{ project.title }}</h2>
+          <p class="mt-1">{{ project.description }}</p>
         </NuxtLink>
       </div>
       <p class="mt-6 text-center">
@@ -71,21 +77,20 @@
         >
       </p>
 
-      <!-- Resume -->
-      <h2 id="skills" class="mt-24">I’m quite a diverse dude.</h2>
+      <h2 id="skills" class="text-2xl lg:text-4xl font-bold mt-12 lg:mt-20">
+        I’m quite a diverse dude.
+      </h2>
       <p>
         I like to be across the board, so I have the ability to see the
-        <em>whole</em>
-        picture
+        <em>whole</em> picture.
       </p>
-      <div class="flex mt-8">
-        <!-- Experience / Education -->
-        <div class="w-1/2">
-          <h3>Experience</h3>
+      <div class="flex flex-col md:flex-row mt-8">
+        <div class="w-full md:w-1/2">
+          <h3 class="text-lg font-bold">Experience</h3>
 
           <div class="flex flex-col mt-6 space-y-6">
             <div>
-              <h4>Helping Group</h4>
+              <h4 class="font-medium">Helping Group</h4>
               <p class="mt-2">
                 Founder, President <br />
                 <em class="text-sm">Jan 2020 - Present</em>
@@ -93,7 +98,9 @@
             </div>
 
             <div>
-              <h4>Centre for eResearch and Digital Innovation</h4>
+              <h4 class="font-medium">
+                Centre for eResearch and Digital Innovation
+              </h4>
               <p class="mt-2">
                 Migrations Officer <br />
                 <em class="text-sm">Jan 2021 - Present</em>
@@ -105,7 +112,7 @@
             </div>
 
             <div>
-              <h4>Lawrencia Cycles</h4>
+              <h4 class="font-medium">Lawrencia Cycles</h4>
               <p class="mt-2">
                 Sales Assistant <br />
                 <em class="text-sm">Mar 2017 - Dec 2018</em>
@@ -113,11 +120,11 @@
             </div>
           </div>
 
-          <h3 class="mt-12">Education</h3>
+          <h3 class="text-lg font-bold mt-12">Education</h3>
 
           <div class="flex flex-col mt-6 space-y-6">
             <div>
-              <h4>Swinburne University of Technology</h4>
+              <h4 class="font-medium">Swinburne University of Technology</h4>
               <p class="mt-2">
                 Bachelor of Computer Science (Software Development) <br />
                 <em class="text-sm">Graduating 2021</em>
@@ -126,9 +133,8 @@
           </div>
         </div>
 
-        <!-- Skills / Tools -->
-        <div class="w-1/2">
-          <h3>Tools</h3>
+        <div class="w-full mt-12 md:mt-0 md:w-1/2">
+          <h3 class="text-lg font-bold">Tools</h3>
 
           <div class="grid grid-cols-2 mt-6 gap-6">
             <div v-for="tool in tools" :key="tool.name">
@@ -136,7 +142,7 @@
             </div>
           </div>
 
-          <h3 class="mt-12">Skills</h3>
+          <h3 class="text-lg font-bold mt-12">Skills</h3>
           <div class="flex flex-col mt-6 space-y-6">
             <div v-for="skill in skills" :key="skill.name">
               <i :class="skill.icon" class="mr-2"></i> {{ skill.name }}
@@ -144,7 +150,7 @@
           </div>
         </div>
       </div>
-      <p class="mt-6">
+      <p class="mt-12 md:mt-6">
         Please see more at my
         <a
           class="font-bold"
@@ -155,52 +161,71 @@
         >
       </p>
 
-      <!-- Articles -->
-      <h2 id="articles" class="mt-24">
+      <h2 id="articles" class="text-2xl lg:text-4xl font-bold mt-12 lg:mt-20">
         And every now and then I write about what I’m up too.
       </h2>
       <p>
         It’s another great way to share knowledge, and for me to remember where
         I’ve been and what I’ve done.
       </p>
-      <div class="grid grid-cols-2 gap-8 mt-8">
+      <div class="flex flex-col md:flex-row gap-4 mt-8">
         <NuxtLink
-          v-for="(article, index) in articles"
-          :key="index"
-          :to="article.path"
-          :class="
-            index == 0 ? 'row-span-5 col-span-1' : 'grid grid-cols-4 gap-4'
-          "
+          :to="firstArticle.path"
+          class="shadow rounded-xl w-full md:w-1/2"
         >
           <img
-            class="w-full object-cover rounded-xl"
-            :class="index == 0 ? '' : 'col-span-1 h-16'"
+            class="w-full object-cover rounded-t-xl"
             style="max-height: 16rem;"
-            :src="'/images/' + article.featured_image"
-            :alt="article.featured_image"
+            :src="'/images/' + firstArticle.featured_image"
+            :alt="firstArticle.featured_image"
           />
-          <div v-if="index == 0" class="mt-4">
-            <h3>{{ article.title }}</h3>
-            <p class="mt-2">{{ article.description }} <br /></p>
+          <div class="p-4">
+            <h3 class="text-lg font-bold">{{ firstArticle.title }}</h3>
+            <p class="mt-2">{{ firstArticle.description }} <br /></p>
             <p class="mt-2">
-              <em class="text-sm">{{ dateFormat(article.createdAt) }}</em>
+              <em class="text-sm">{{ dateFormat(firstArticle.createdAt) }}</em>
             </p>
           </div>
-          <h4 v-else class="col-span-3 flex items-center h-16">
-            {{ article.title }}
-          </h4>
         </NuxtLink>
-        <NuxtLink
-          to="/articles"
-          class="inline-block px-3 text-lg h-16 flex items-center font-bold text-white bg-gray-900 rounded-lg hover:shadow-lg transition-shadow duration-75 ease-in-out"
-          >Read More</NuxtLink
-        >
+
+        <div class="w-full md:w-1/2 flex flex-col gap-4">
+          <NuxtLink
+            v-for="article in otherArticles"
+            :key="article.title"
+            :to="article.path"
+            class="grid grid-cols-5 shadow rounded-xl"
+          >
+            <img
+              class="col-span-1 object-cover h-full w-full rounded-l-xl"
+              :src="'/images/' + article.featured_image"
+              :alt="article.featured_image"
+            />
+            <div class="col-span-4 p-4 flex flex-col justify-center">
+              <h4 class="font-bold">
+                {{ article.title }}
+              </h4>
+              <em class="mt-1 text-sm">{{ dateFormat(article.createdAt) }}</em>
+            </div>
+          </NuxtLink>
+
+          <NuxtLink
+            v-if="this.articles.length >= 6"
+            to="/articles"
+            class="inline-block px-3 text-lg h-16 flex items-center font-bold text-white bg-gray-900 rounded-lg hover:shadow-lg transition-shadow duration-75 ease-in-out"
+            >Read More</NuxtLink
+          >
+        </div>
       </div>
 
-      <!-- Contact -->
-      <h2 id="contact" class="mt-24">That’s it for me - now it’s your turn!</h2>
+      <h2 id="contact" class="text-2xl lg:text-4xl font-bold mt-12 lg:mt-20">
+        That’s it for me - <br class="md:hidden" />
+        now it’s your turn!
+      </h2>
       <p>
-        If you’ve made it this far, thanks! I’d love to chat! Reach me through…
+        If you’ve made it this far, thank-you!. Have you got a killer idea you
+        need help realising? Need some digital consultancy?
+        <b>I’d love to chat!</b>
+        Reach me through…
       </p>
       <div class="flex flex-col items-center justify-center my-16">
         <div class="mt-6 text-5xl">👋 🤙</div>
@@ -260,6 +285,8 @@ const months = [
 export default {
   async asyncData({ $content }) {
     const articles = await $content("articles")
+      .sortBy("createdAt", "desc")
+      .where({ published: true })
       .only(["title", "description", "createdAt", "featured_image", "path"])
       .fetch();
 
@@ -275,14 +302,6 @@ export default {
     return {
       articles: [],
       projects: [],
-      gridList: [
-        "col-span-2",
-        "col-span-3",
-        "col-span-3",
-        "col-span-2",
-        "col-span-2",
-        "col-span-3"
-      ],
       skills: [
         {
           name: "Software Development",
@@ -327,7 +346,7 @@ export default {
           icon: "fal fa-robot"
         },
         {
-          name: "Amazon Web Services",
+          name: "AWS",
           icon: "fab fa-aws"
         },
         {
@@ -349,6 +368,9 @@ export default {
   computed: {
     firstArticle() {
       return this.articles ? this.articles[0] : null;
+    },
+    otherArticles() {
+      return this.articles ? this.articles.slice(1, 5) : null;
     }
   },
 
@@ -366,6 +388,6 @@ export default {
 
 <style scoped>
 .grid-cell {
-  @apply p-8 bg-blue-100 rounded-xl h-48;
+  @apply p-4 bg-gradient-to-br from-indigo-200 to-blue-200 rounded-xl h-auto;
 }
 </style>

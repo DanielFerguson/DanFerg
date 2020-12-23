@@ -2,6 +2,7 @@
 title: Reviewing the years tools
 description: "2020 has brought many changes, not excuding a number of changes to the tools that I use on a day to day basis."
 featured_image: nasa-Q1p7bh3SHj8-unsplash.jpg
+published: false
 ---
 
 - What's happened this year?
