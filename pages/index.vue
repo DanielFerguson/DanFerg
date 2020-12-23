@@ -6,14 +6,19 @@
         class="mt-12 lg:mt-48 h-48"
         alt="Daniel Ferguson"
       />
-      <h2 class="text-4xl font-bold mt-6">Hey! I'm Dan 👋</h2>
-      <h1 class="text-5xl font-bold leading-10 my-8">
-        I’m a
-        <span
-          class="bg-gradient-to-r from-teal-400 to-purple-500 text-white px-2 py-1"
-          >social entrepreneur</span
+      <h2 class="text-3xl font-bold mt-6">Hey! I'm Dan 👋</h2>
+      <div
+        class="text-4xl font-bold my-8 flex flex-col sm:flex-row gap-0 sm:gap-4 items-center"
+      >
+        <h1 class="leading-10">
+          I’m a
+        </h1>
+        <h1
+          class="mt-1 bg-gradient-to-r from-teal-400 to-purple-500 text-white px-2"
         >
-      </h1>
+          social entrepreneur
+        </h1>
+      </div>
       <p class="text-center text-lg">
         solutions architect and software developer;
         <br class="hidden md:block" />
