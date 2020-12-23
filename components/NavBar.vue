@@ -1,5 +1,5 @@
 <template>
-  <div class="flex justify-between py-8 px-16">
+  <div class="flex justify-between py-8 px-8 md:px-16">
     <nuxt-link to="/"
       ><h2 class="text-2xl font-bold">Hey! I’m Dan 👋</h2></nuxt-link
     >

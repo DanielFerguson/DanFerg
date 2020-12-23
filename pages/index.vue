@@ -22,9 +22,9 @@
       <p class="text-center text-lg">
         solutions architect and software developer;
         <br class="hidden md:block" />
-        seeking to create digitally enabled
+        seeking to create digitally enabled <br class="sm:hidden" />
         <span
-          class="text-white font-bold bg-gradient-to-r from-pink-500 to-yellow-600 p-1"
+          class="text-white font-bold bg-gradient-to-r from-pink-500 to-yellow-500 p-1"
           >change for good.</span
         >
       </p>

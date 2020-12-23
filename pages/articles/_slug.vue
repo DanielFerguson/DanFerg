@@ -2,7 +2,7 @@
   <div>
     <nav-bar />
 
-    <article class="px-16 mx-auto mb-24">
+    <article class="px-4 mx-auto mb-24">
       <h1
         class="text-5xl font-bold mt-8 text-center"
         style="line-height: 4rem;"
