@@ -71,6 +71,61 @@ export default {
         hid: "description",
         name: "description",
         content: "Every now and then I like to write about what I’m up too."
+      },
+      {
+        hid: "og:url",
+        property: "og:url",
+        content: "https://danferg.com/articles/"
+      },
+      {
+        hid: "og:type",
+        property: "og:type",
+        content: "website"
+      },
+      {
+        hid: "og:title",
+        property: "og:title",
+        content: "Articles | Dan Ferguson"
+      },
+      {
+        hid: "og:description",
+        property: "og:description",
+        content: "Every now and then I like to write about what I’m up too."
+      },
+      {
+        hid: "og:image",
+        property: "og:image",
+        content: "https://danferg.com/opengraph-image.png"
+      },
+      {
+        hid: "twitter:card",
+        property: "twitter:card",
+        content: "https://danferg.com/twitter-meta-image.png"
+      },
+      {
+        hid: "twitter:domain",
+        property: "twitter:domain",
+        content: "https://danferg.com/"
+      },
+      {
+        hid: "twitter:url",
+        property: "twitter:url",
+        content: "https://danferg.com/articles/"
+      },
+      {
+        hid: "twitter:title",
+        property: "twitter:title",
+        content: "Articles | Dan Ferguson"
+      },
+      {
+        hid: "twitter:description",
+        property: "twitter:description",
+        content: "Every now and then I like to write about what I’m up too."
+      },
+      {
+        hid: "twitter:image",
+        property: "twitter:image",
+        content: "https://danferg.com/twitter-meta-image.png"
       }
     ]
   },
