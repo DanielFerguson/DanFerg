@@ -412,11 +412,13 @@ export default {
 
   methods: {
     dateFormat(dateString) {
-      const date = new Date(dateString);
-
-      return `${days[date.getDay()]} ${date.getDate()}, ${
-        months[date.getMonth()]
-      } ${date.getUTCFullYear()}`;
+      const options = {
+        weekday: "long",
+        year: "numeric",
+        month: "long",
+        day: "numeric"
+      };
+      return new Date(dateString).toLocaleDateString("en-US", options);
     }
   }
 };

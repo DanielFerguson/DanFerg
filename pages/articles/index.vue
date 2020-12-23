@@ -2,7 +2,7 @@
   <div>
     <NavBar />
 
-    <div class="xl:w-1/2 px-16 mx-auto">
+    <div class="xl:w-3/5 px-4 xl:px-16 mx-auto">
       <h1
         class="text-5xl font-bold mt-8 text-center"
         style="line-height: 4rem;"
@@ -11,7 +11,7 @@
         about what I’m up too.
       </h1>
 
-      <div class="flex flex-col gap-8 my-16">
+      <div class="flex flex-col gap-4 my-16">
         <NuxtLink
           :to="article.path"
           class="grid grid-cols-5 shadow hover:shadow-lg transition-shadow duration-75 ease-in-out rounded-xl"
@@ -80,11 +80,13 @@ export default {
 
   methods: {
     dateFormat(dateString) {
-      const date = new Date(dateString);
-
-      return `${days[date.getDay()]} ${date.getDate()}, ${
-        months[date.getMonth()]
-      } ${date.getUTCFullYear()}`;
+      const options = {
+        weekday: "long",
+        year: "numeric",
+        month: "long",
+        day: "numeric"
+      };
+      return new Date(dateString).toLocaleDateString("en-US", options);
     }
   }
 };
