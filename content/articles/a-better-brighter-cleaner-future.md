@@ -6,14 +6,7 @@ published: true
 date: 12/23/2020
 ---
 
-<img class="h-64 w-full object-cover rounded-xl shadow" src="/images/sungrow-emea-VC-m6ULjJ6Y-unsplash.jpg" />
-
-# Boring alert! 🚨
-
-Well, hopefully that’s achieved two things;
-
-1. You have been warned!
-2. You’re paying attention! Thank goodness for emojis, hey?
+<img class="object-cover w-full h-64 shadow rounded-xl" src="/images/sungrow-emea-VC-m6ULjJ6Y-unsplash.jpg" />
 
 # The issue at hand
 
