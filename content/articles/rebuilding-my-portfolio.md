@@ -3,7 +3,7 @@ title: Welcome, to Website v3!
 description: Well, let’s start of with the obvious question…
 featured_image: fallon-michael-VUWDlBXGogg-unsplash.jpg
 published: true
-date: 12-23-2020
+date: 12/23/2020
 ---
 
 Well, let’s start of with the obvious question…

@@ -3,7 +3,7 @@ title: A better, brighter, cleaner future.
 description: I believe that you have a powerful voice. One of the ways you can be <b>clearly</b> heard is through how you chose to spend your money 💰.
 featured_image: sungrow-emea-VC-m6ULjJ6Y-unsplash.jpg
 published: true
-date: 12-23-2020
+date: 12/23/2020
 ---
 
 <img class="h-64 w-full object-cover rounded-xl shadow" src="/images/sungrow-emea-VC-m6ULjJ6Y-unsplash.jpg" />
