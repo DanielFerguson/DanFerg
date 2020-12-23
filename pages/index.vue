@@ -22,7 +22,7 @@
       <p class="text-center text-lg">
         solutions architect and software developer;
         <br class="hidden md:block" />
-        seeking to create digitally enabled, scalable
+        seeking to create digitally enabled
         <span
           class="text-white font-bold bg-gradient-to-r from-pink-500 to-yellow-600 p-1"
           >change for good.</span
@@ -46,15 +46,16 @@
 
     <div class="xl:w-3/5 px-4 xl:px-16 mx-auto">
       <div id="projects" class="grid grid-cols-6 gap-4 bg-white">
-        <NuxtLink
+        <a
           v-for="project in projects"
           :key="project.title"
+          target="_blank"
           class="col-span-6 md:col-span-3 lg:col-span-2 grid-cell hover:shadow-lg transition-shadow duration-75 ease-in-out col-span-5"
-          :to="project.path"
+          :href="project.link"
         >
           <h2 class="text-2xl font-bold leading-10">{{ project.title }}</h2>
           <p class="mt-1">{{ project.description }}</p>
-        </NuxtLink>
+        </a>
       </div>
       <p class="mt-6 text-center">
         See more on
@@ -295,18 +296,47 @@ export default {
       .only(["title", "description", "createdAt", "featured_image", "path"])
       .fetch();
 
-    const projects = await $content("projects")
-      .sortBy("priority", "asc")
-      .only(["title", "description", "priority", "path"])
-      .fetch();
-
-    return { articles, projects };
+    return { articles };
   },
 
   data() {
     return {
-      articles: [],
-      projects: [],
+      projects: [
+        {
+          title: "Helping Group",
+          description: "Combatting current events with digital solutions.",
+          link: "https://helping.group"
+        },
+        {
+          title: "Innovative Land Index",
+          description:
+            "A data-driven approach to make planning decisions for land zoning. An index based on soil characteristics, rainfall and the distance from the major urban centres of farmland.",
+          link: "https://innovative-land-index.vercel.app/"
+        },
+        {
+          title: "ML Traffic Predictor",
+          description:
+            "A privacy-focused client-side alternative to Google Maps, utilising weather data and traffic flow directional data for a section of East Melbourne.",
+          link: "https://traffic-flow-prediction.vercel.app"
+        },
+        {
+          title: "Swin Lead",
+          description:
+            "A study into the innovation and leadership opportunities and barriers at Swinburne.",
+          link: "https://swin-lead.vercel.app/"
+        },
+        {
+          title: "Yoogle",
+          description: "A captions-based search engine.",
+          link: "https://yoogle.vercel.app/"
+        },
+        {
+          title: "Stroke Rehabilitation Board",
+          description:
+            "An open source project focused on monitoring the balance recovery of stroke victims.",
+          link: "https://github.com/DanielFerguson/Stroke-Rehabilitation-Board"
+        }
+      ],
       skills: [
         {
           name: "Software Development",
