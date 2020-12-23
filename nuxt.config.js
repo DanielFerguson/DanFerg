@@ -11,7 +11,12 @@ export default {
     meta: [
       { charset: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { hid: "description", name: "description", content: "" }
+      {
+        hid: "description",
+        name: "description",
+        content:
+          "Social entrepreneur and serial innovator, seeking to create change for good. Founder of the Helping Group and AIAO."
+      }
     ],
     link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }]
   },
@@ -19,7 +24,9 @@ export default {
   buildModules: ["@nuxtjs/tailwindcss"],
   modules: ["@nuxt/content"],
   content: {},
-  build: {},
+  build: {
+    cssSourceMap: true
+  },
   generate: {
     async routes() {
       const { $content } = require("@nuxt/content");

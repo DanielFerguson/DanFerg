@@ -31,15 +31,28 @@
 
       <a
         href="#contact"
+        aria-label="A link to the contact section of the website"
         class="inline-block px-6 py-4 mt-12 text-2xl font-bold text-white bg-gray-900 rounded-full hover:shadow-lg transition-shadow duration-75 ease-in-out"
       >
         Let's Talk! 🤙
       </a>
 
       <div class="flex text-xl font-medium my-12 lg:my-20 space-x-6">
-        <a href="#projects">Projects</a>
-        <a href="#skills">Skills</a>
-        <a href="#articles">Articles</a>
+        <a
+          aria-label="A link to the project section of the website"
+          href="#projects"
+          >Projects</a
+        >
+        <a
+          aria-label="A link to the skills section of the website"
+          href="#skills"
+          >Skills</a
+        >
+        <a
+          aria-label="A link to the articles section of the website"
+          href="#articles"
+          >Articles</a
+        >
         <!-- <a href="#talks">Talks</a> -->
       </div>
     </div>
@@ -49,7 +62,9 @@
         <a
           v-for="project in projects"
           :key="project.title"
+          :aria-label="project.title"
           target="_blank"
+          rel="noopener noreferrer"
           class="col-span-6 md:col-span-3 lg:col-span-2 grid-cell hover:shadow-lg transition-shadow duration-75 ease-in-out col-span-5"
           :href="project.link"
         >
@@ -64,6 +79,7 @@
           class="font-bold"
           target="_blank"
           rel="noopener noreferrer"
+          aria-label="A link to the Helping Group website"
           >helping.group</a
         >,
         <a
@@ -71,6 +87,7 @@
           class="font-bold"
           target="_blank"
           rel="noopener noreferrer"
+          aria-label="A link to my LinkedIn profile"
           ><i class="fab fa-linkedin text-blue-700"></i> LinkedIn</a
         >
         and
@@ -79,6 +96,7 @@
           class="font-bold"
           target="_blank"
           rel="noopener noreferrer"
+          aria-label="A link to my Github account"
           ><i class="fab fa-github text-gray-800"></i> Github</a
         >
       </p>
@@ -163,6 +181,7 @@
           href="https://linkedin.com/in/danferg"
           target="_blank"
           rel="noopener noreferrer"
+          aria-label="A link to my LinkedIn profile"
           ><i class="fab fa-linkedin text-blue-700"></i> LinkedIn</a
         >
       </p>
@@ -179,6 +198,7 @@
         <NuxtLink
           :to="firstArticle.path"
           class="shadow rounded-xl w-full md:w-1/2 hover:shadow-lg transition-shadow duration-75 ease-in-out"
+          :aria-label="`A link to my article, titled ${firstArticle.title}`"
         >
           <img
             class="w-full object-cover rounded-t-xl"
@@ -200,6 +220,7 @@
             v-for="article in otherArticles"
             :key="article.title"
             :to="article.path"
+            :aria-label="`A link to my article, titled ${firstArticle.title}`"
             class="grid grid-cols-5 shadow rounded-xl hover:shadow-lg transition-shadow duration-75 ease-in-out"
           >
             <img
@@ -218,6 +239,7 @@
           <NuxtLink
             v-if="this.articles.length >= 6"
             to="/articles"
+            aria-label="A link to the articles page"
             class="inline-block px-3 text-lg h-16 flex items-center font-bold text-white bg-gray-900 rounded-lg hover:shadow-lg transition-shadow duration-75 ease-in-out"
             >Read More</NuxtLink
           >
@@ -242,18 +264,24 @@
         <div class="flex mt-6 mb-12 space-x-6 align-center">
           <a
             href="https://twitter.com/thedannyferg"
+            rel="noopener noreferrer"
+            aria-label="A link to my twitter profile"
             class="flex items-center justify-center inline-block w-16 h-16 bg-blue-200 rounded-full hover:bg-blue-50"
           >
             <twitter />
           </a>
           <a
             href="https://linkedin.com/in/danferg"
+            rel="noopener noreferrer"
+            aria-label="A link to my LinkedIn profile"
             class="flex items-center justify-center inline-block w-16 h-16 bg-green-200 rounded-full"
           >
             <linkedin />
           </a>
           <a
             href="https://github.com/DanielFerguson"
+            rel="noopener noreferrer"
+            aria-label="A link to my Github profile"
             class="flex items-center justify-center inline-block w-16 h-16 bg-orange-200 rounded-full"
           >
             <github />
