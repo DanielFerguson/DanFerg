@@ -40,7 +40,7 @@
         <a href="#projects">Projects</a>
         <a href="#skills">Skills</a>
         <a href="#articles">Articles</a>
-        <a href="#talks">Talks</a>
+        <!-- <a href="#talks">Talks</a> -->
       </div>
     </div>
 
