@@ -65,7 +65,14 @@ const months = [
 
 export default {
   head: {
-    title: "Articles"
+    title: "Articles",
+    meta: [
+      {
+        hid: "description",
+        name: "description",
+        content: "Every now and then I like to write about what I’m up too."
+      }
+    ]
   },
 
   async asyncData({ $content, params }) {

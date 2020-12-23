@@ -20,8 +20,19 @@
 
 <script>
 export default {
-  head: {
-    title: "hello"
+  head() {
+    let article = this.article;
+
+    return {
+      title: article.title,
+      meta: [
+        {
+          hid: "description",
+          name: "description",
+          content: article.description
+        }
+      ]
+    };
   },
 
   async asyncData({ $content, params }) {

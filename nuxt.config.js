@@ -5,7 +5,7 @@ export default {
   head: {
     titleTemplate: titleChunk => {
       return titleChunk
-        ? `${titleChunk} | Dan Ferguson - Social entrepreneur seeking to create change for good.`
+        ? `${titleChunk} | Dan Ferguson`
         : "Dan Ferguson - Social entrepreneur seeking to create change for good.";
     },
     meta: [
@@ -22,7 +22,7 @@ export default {
   },
   components: true,
   buildModules: ["@nuxtjs/tailwindcss"],
-  modules: ["@nuxt/content"],
+  modules: ["@nuxt/content", "@nuxtjs/sitemap"],
   content: {},
   build: {
     cssSourceMap: true,
@@ -31,6 +31,20 @@ export default {
         vue.transformAssetUrls.img = ["data-src", "src"];
         vue.transformAssetUrls.source = ["data-srcset", "srcset"];
       }
+    }
+  },
+  sitemap: {
+    hostname: "https://danferg.com",
+    gzip: true,
+    exclude: [],
+    async routes() {
+      const { $content } = require("@nuxt/content");
+
+      const files = await $content({ deep: true })
+        .only(["path"])
+        .fetch();
+
+      return files.map(file => (file.path === "/index" ? "/" : file.path));
     }
   },
   plugins: ["~/plugins/vue-lazysizes.client.js"],
