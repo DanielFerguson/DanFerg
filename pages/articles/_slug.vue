@@ -54,12 +54,12 @@ export default {
         {
           hid: "og:image",
           property: "og:image",
-          content: "https://danferg.com/" + article.featured_image
+          content: "https://danferg.com/images/" + article.featured_image
         },
         {
           hid: "twitter:card",
           property: "twitter:card",
-          content: "https://danferg.com/" + article.featured_image
+          content: "https://danferg.com/images/" + article.featured_image
         },
         {
           hid: "twitter:domain",
@@ -84,7 +84,7 @@ export default {
         {
           hid: "twitter:image",
           property: "twitter:image",
-          content: "https://danferg.com/" + article.featured_image
+          content: "https://danferg.com/images/" + article.featured_image
         }
       ]
     };
