@@ -44,22 +44,22 @@ Hey, we’re all guilty of it and we all have our own ‘reasons’ that we’ve
 **PLEASE** - scan your computer, now! I mean now! I have included a number of my personal recommendations below. All of them are free to use and are seen as excellent options.
 
 <div class="flex flex-col gap-4">
-  <a href="https://www.bitdefender.com.au/" class="flex flex-row items-center px-8 no-underline transition-shadow duration-75 ease-in-out rounded shadow cursor-pointer hover:shadow-xl">
+  <a href="https://www.bitdefender.com.au/" class="flex flex-row items-center px-8 no-underline transition-shadow duration-75 ease-in-out rounded shadow cursor-pointer hover:shadow-lg">
     <img src="/images/bitdefender.png" class="self-center h-8" alt="Bitdefender Logo">
     <p class="pl-4 text-2xl font-semibold">Bitdefender</p>
   </a>
   
-  <a href="https://www.kaspersky.com.au/" class="flex flex-row items-center px-8 no-underline transition-shadow duration-75 ease-in-out rounded shadow cursor-pointer hover:shadow-xl">
+  <a href="https://www.kaspersky.com.au/" class="flex flex-row items-center px-8 no-underline transition-shadow duration-75 ease-in-out rounded shadow cursor-pointer hover:shadow-lg">
     <img src="/images/kaspersky.svg" class="self-center h-8" alt="Kaspersky Logo">
     <p class="pl-4 text-2xl font-semibold">Kaspersky</p>
   </a>
   
-  <a href="https://www.malwarebytes.com/" class="flex flex-row items-center px-8 no-underline transition-shadow duration-75 ease-in-out rounded shadow cursor-pointer hover:shadow-xl">
+  <a href="https://www.malwarebytes.com/" class="flex flex-row items-center px-8 no-underline transition-shadow duration-75 ease-in-out rounded shadow cursor-pointer hover:shadow-lg">
     <img src="/images/malwarebytes.png" class="self-center h-8" alt="MalwareBytes Logo">
     <p class="pl-4 text-2xl font-semibold">MalwareBytes</p>
   </a>
   
-  <a href="https://www.avast.com/" class="flex flex-row items-center px-8 no-underline transition-shadow duration-75 ease-in-out rounded shadow cursor-pointer hover:shadow-xl">
+  <a href="https://www.avast.com/" class="flex flex-row items-center px-8 no-underline transition-shadow duration-75 ease-in-out rounded shadow cursor-pointer hover:shadow-lg">
     <img src="/images/avast.png" class="self-center h-8" alt="Avast Logo">
     <p class="pl-4 text-2xl font-semibold">Avast</p>
   </a>
@@ -77,9 +77,9 @@ If you don’t want to use another excellent alternative like Firefox or Safari,
 
 If you _really_ want to take back your identity, change your default search engine. For this, I recommend two very different options.
 
-1. <img src="/images/duckduckgo.png" alt="DuckDuckGo Logo" class="h-12"> [**DuckDuckGo**](https://duckduckgo.com/) - this is the more privacy-centric alternative. I’ve been using DDG for a while now, and haven’t really needed to switch back to Google. One of the main issues with alternatives that I’ve found is trying to find very technical solutions websites; this is where others struggled and Google thrives. This hasn’t been an issue for DDG, so give it a go!
+1. [**DuckDuckGo**](https://duckduckgo.com/) - this is the more privacy-centric alternative. I’ve been using DDG for a while now, and haven’t really needed to switch back to Google. One of the main issues with alternatives that I’ve found is trying to find very technical solutions websites; this is where others struggled and Google thrives. This hasn’t been an issue for DDG, so give it a go!
 
-2. <img src="/images/ecosia.png" alt="DuckDuckGo Logo" class="h-12"> [**Ecosia**](https://www.ecosia.org/?c=en) - this one isn’t for everyone, but each time you search, a portion of the ad revenue generated actually **goes towards planting trees!** It’s still in it’s infancy phase, and has a lot of growing to do, but it is a great option for those that want to actively be more sustainable.
+2. [**Ecosia**](https://www.ecosia.org/?c=en) - this one isn’t for everyone, but each time you search, a portion of the ad revenue generated actually **goes towards planting trees!** It’s still in it’s infancy phase, and has a lot of growing to do, but it is a great option for those that want to actively be more sustainable.
 
 ## Update all of the thing ✨
 
@@ -110,17 +110,17 @@ I decided to try 1Password on the referral from a friend, and let me tell you - 
 And best of all, **no two passwords are the same**. So the next time a service that I use gets hacked and they leak peoples credentials, the only thing I need to worry about is updating one password!
 
 <div class="flex flex-col gap-4">
-  <a href="https://1password.com/" class="flex flex-row items-center px-8 no-underline transition-shadow duration-75 ease-in-out rounded shadow cursor-pointer hover:shadow-xl">
+  <a href="https://1password.com/" class="flex flex-row items-center px-8 no-underline transition-shadow duration-75 ease-in-out rounded shadow cursor-pointer hover:shadow-lg">
     <img src="/images/1password.png" class="self-center h-8" alt="1Password Logo">
     <p class="pl-4 text-2xl font-semibold">1Password</p>
   </a>
   
-  <a href="https://www.lastpass.com/" class="flex flex-row items-center px-8 no-underline transition-shadow duration-75 ease-in-out rounded shadow cursor-pointer hover:shadow-xl">
+  <a href="https://www.lastpass.com/" class="flex flex-row items-center px-8 no-underline transition-shadow duration-75 ease-in-out rounded shadow cursor-pointer hover:shadow-lg">
     <img src="/images/lastpass.png" class="self-center h-8" alt="LastPass Logo">
     <p class="pl-4 text-2xl font-semibold">LastPass</p>
   </a>
   
-  <a href="https://www.dashlane.com/" class="flex flex-row items-center px-8 no-underline transition-shadow duration-75 ease-in-out rounded shadow cursor-pointer hover:shadow-xl">
+  <a href="https://www.dashlane.com/" class="flex flex-row items-center px-8 no-underline transition-shadow duration-75 ease-in-out rounded shadow cursor-pointer hover:shadow-lg">
     <img src="/images/dashlane.png" class="self-center h-8" alt="Dashlane Logo">
     <p class="pl-4 text-2xl font-semibold">Dashlane</p>
   </a>
@@ -133,17 +133,17 @@ This is simple - protect your internet traffic. If you haven’t already been bo
 Especially if you are using public WiFi, please consider using something that will stop hackers intercepting your details. Just because you haven’t typed your password or banking details doesn’t mean that it isn’t being sent over the network. You’d be surprised what actually gets passed between your phone and services.
 
 <div class="flex flex-col gap-4 mb-12">
-  <a href="https://vpn.mozilla.org/" class="flex flex-row items-center px-8 no-underline transition-shadow duration-75 ease-in-out rounded shadow cursor-pointer hover:shadow-xl">
+  <a href="https://vpn.mozilla.org/" class="flex flex-row items-center px-8 no-underline transition-shadow duration-75 ease-in-out rounded shadow cursor-pointer hover:shadow-lg">
     <img src="/images/mozilla-vpn.svg" class="self-center h-8" alt="Mozilla VPN Logo">
     <p class="pl-4 text-2xl font-semibold">Mozilla VPN</p>
   </a>
   
-  <a href="https://nordvpn.com/" class="flex flex-row items-center px-8 no-underline transition-shadow duration-75 ease-in-out rounded shadow cursor-pointer hover:shadow-xl">
+  <a href="https://nordvpn.com/" class="flex flex-row items-center px-8 no-underline transition-shadow duration-75 ease-in-out rounded shadow cursor-pointer hover:shadow-lg">
     <img src="/images/nordvpn.png" class="self-center h-8" alt="NordVPN Logo">
     <p class="pl-4 text-2xl font-semibold">NordVPN</p>
   </a>
   
-  <a href="https://www.expressvpn.com/" class="flex flex-row items-center px-8 no-underline transition-shadow duration-75 ease-in-out rounded shadow cursor-pointer hover:shadow-xl">
+  <a href="https://www.expressvpn.com/" class="flex flex-row items-center px-8 no-underline transition-shadow duration-75 ease-in-out rounded shadow cursor-pointer hover:shadow-lg">
     <img src="/images/expressvpn.png" class="self-center h-8" alt="ExpressVPN Logo">
     <p class="pl-4 text-2xl font-semibold">ExpressVPN</p>
   </a>
