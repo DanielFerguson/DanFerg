@@ -3,28 +3,28 @@
     <div class="flex flex-col items-center w-4/5 mx-auto text-center">
       <img
         src="/headshot.jpg"
-        class="mt-12 lg:mt-48 h-48"
+        class="h-48 mt-12 lg:mt-48"
         alt="Daniel Ferguson"
       />
-      <h2 class="text-3xl font-bold mt-6">Hey! I'm Dan 👋</h2>
+      <h2 class="mt-6 text-3xl font-bold">Hey! I'm Dan 👋</h2>
       <div
-        class="text-4xl font-bold my-8 flex flex-col sm:flex-row gap-0 sm:gap-4 items-center"
+        class="flex flex-col items-center gap-0 my-8 text-4xl font-bold sm:flex-row sm:gap-4"
       >
         <h1 class="leading-10">
           I’m a
         </h1>
         <h1
-          class="mt-1 bg-gradient-to-r from-teal-400 to-purple-500 text-white px-2"
+          class="px-2 mt-1 text-white bg-gradient-to-r from-teal-400 to-purple-500"
         >
           social entrepreneur
         </h1>
       </div>
-      <p class="text-center text-lg">
+      <p class="text-lg text-center">
         solutions architect and software developer;
         <br class="hidden md:block" />
         seeking to create digitally enabled <br class="sm:hidden" />
         <span
-          class="text-white font-bold bg-gradient-to-r from-pink-500 to-yellow-500 p-1"
+          class="p-1 font-bold text-white bg-gradient-to-r from-pink-500 to-yellow-500"
           >change for good.</span
         >
       </p>
@@ -32,12 +32,12 @@
       <a
         href="#contact"
         aria-label="A link to the contact section of the website"
-        class="inline-block px-6 py-4 mt-12 text-2xl font-bold text-white bg-gray-900 rounded-full hover:shadow-lg transition-shadow duration-75 ease-in-out"
+        class="inline-block px-6 py-4 mt-12 text-2xl font-bold text-white transition-shadow duration-75 ease-in-out bg-gray-900 rounded-full hover:shadow-lg"
       >
         Let's Talk! 🤙
       </a>
 
-      <div class="flex text-xl font-medium my-12 lg:my-20 space-x-6">
+      <div class="flex my-12 space-x-6 text-xl font-medium lg:my-20">
         <a
           aria-label="A link to the project section of the website"
           href="#projects"
@@ -57,7 +57,7 @@
       </div>
     </div>
 
-    <div class="xl:w-3/5 px-4 xl:px-16 mx-auto">
+    <div class="px-4 mx-auto xl:w-3/5 xl:px-16">
       <div id="projects" class="grid grid-cols-6 gap-4 bg-white">
         <a
           v-for="project in projects"
@@ -65,7 +65,7 @@
           :aria-label="project.title"
           target="_blank"
           rel="noopener noreferrer"
-          class="col-span-6 md:col-span-3 lg:col-span-2 grid-cell hover:shadow-lg transition-shadow duration-75 ease-in-out col-span-5"
+          class="col-span-5 col-span-6 transition-shadow duration-75 ease-in-out md:col-span-3 lg:col-span-2 grid-cell hover:shadow-lg"
           :href="project.link"
         >
           <h2 class="text-2xl font-bold leading-10">{{ project.title }}</h2>
@@ -88,7 +88,7 @@
           target="_blank"
           rel="noopener noreferrer"
           aria-label="A link to my LinkedIn profile"
-          ><i class="fab fa-linkedin text-blue-700"></i> LinkedIn</a
+          ><i class="text-blue-700 fab fa-linkedin"></i> LinkedIn</a
         >
         and
         <a
@@ -97,18 +97,18 @@
           target="_blank"
           rel="noopener noreferrer"
           aria-label="A link to my Github account"
-          ><i class="fab fa-github text-gray-800"></i> Github</a
+          ><i class="text-gray-800 fab fa-github"></i> Github</a
         >
       </p>
 
-      <h2 id="skills" class="text-2xl lg:text-4xl font-bold mt-12 lg:mt-20">
+      <h2 id="skills" class="mt-12 text-2xl font-bold lg:text-4xl lg:mt-20">
         I’m quite a diverse dude.
       </h2>
       <p>
         I like to be across the board, so I have the ability to see the
         <em>whole</em> picture.
       </p>
-      <div class="flex flex-col md:flex-row mt-8">
+      <div class="flex flex-col mt-8 md:flex-row">
         <div class="w-full md:w-1/2">
           <h3 class="text-lg font-bold">Experience</h3>
 
@@ -144,7 +144,7 @@
             </div>
           </div>
 
-          <h3 class="text-lg font-bold mt-12">Education</h3>
+          <h3 class="mt-12 text-lg font-bold">Education</h3>
 
           <div class="flex flex-col mt-6 space-y-6">
             <div>
@@ -160,13 +160,13 @@
         <div class="w-full mt-12 md:mt-0 md:w-1/2">
           <h3 class="text-lg font-bold">Tools</h3>
 
-          <div class="grid grid-cols-2 mt-6 gap-6">
+          <div class="grid grid-cols-2 gap-6 mt-6">
             <div v-for="tool in tools" :key="tool.name">
               <i :class="tool.icon" class="mr-2"></i> {{ tool.name }}
             </div>
           </div>
 
-          <h3 class="text-lg font-bold mt-12">Skills</h3>
+          <h3 class="mt-12 text-lg font-bold">Skills</h3>
           <div class="flex flex-col mt-6 space-y-6">
             <div v-for="skill in skills" :key="skill.name">
               <i :class="skill.icon" class="mr-2"></i> {{ skill.name }}
@@ -182,11 +182,11 @@
           target="_blank"
           rel="noopener noreferrer"
           aria-label="A link to my LinkedIn profile"
-          ><i class="fab fa-linkedin text-blue-700"></i> LinkedIn</a
+          ><i class="text-blue-700 fab fa-linkedin"></i> LinkedIn</a
         >
       </p>
 
-      <h2 id="articles" class="text-2xl lg:text-4xl font-bold mt-12 lg:mt-20">
+      <h2 id="articles" class="mt-12 text-2xl font-bold lg:text-4xl lg:mt-20">
         And every now and then I like to write.
       </h2>
       <p>
@@ -194,17 +194,17 @@
         <br />
         create dialogue on topics that interest me or are near to my heart.
       </p>
-      <div class="flex flex-col md:flex-row gap-4 mt-8">
+      <div class="flex flex-col gap-4 mt-8 md:flex-row">
         <NuxtLink
           :to="firstArticle.path"
-          class="shadow rounded-xl w-full md:w-1/2 hover:shadow-lg transition-shadow duration-75 ease-in-out"
+          class="w-full transition-shadow duration-75 ease-in-out shadow rounded-xl md:w-1/2 hover:shadow-lg"
           :aria-label="`A link to my article, titled ${firstArticle.title}`"
         >
           <figure class="picture">
             <img
               :data-src="'/images/' + firstArticle.featured_image"
               :alt="firstArticle.featured_image"
-              class="lazyload w-full object-cover rounded-t-xl"
+              class="object-cover w-full lazyload rounded-t-xl"
               style="max-height: 16rem;"
             />
           </figure>
@@ -217,22 +217,22 @@
           </div>
         </NuxtLink>
 
-        <div class="w-full md:w-1/2 flex flex-col gap-4">
+        <div class="flex flex-col w-full gap-4 md:w-1/2">
           <NuxtLink
             v-for="article in otherArticles"
             :key="article.title"
             :to="article.path"
             :aria-label="`A link to my article, titled ${firstArticle.title}`"
-            class="grid grid-cols-5 shadow rounded-xl hover:shadow-lg transition-shadow duration-75 ease-in-out"
+            class="grid grid-cols-5 transition-shadow duration-75 ease-in-out shadow rounded-xl hover:shadow-lg"
           >
             <figure class="picture">
               <img
                 :data-src="'/images/' + article.featured_image"
                 :alt="article.featured_image"
-                class="lazyload col-span-1 object-cover h-full w-full rounded-l-xl"
+                class="object-cover w-full h-full col-span-1 lazyload rounded-l-xl"
               />
             </figure>
-            <div class="col-span-4 p-4 flex flex-col justify-center">
+            <div class="flex flex-col justify-center col-span-4 p-4">
               <h4 class="font-bold">
                 {{ article.title }}
               </h4>
@@ -244,13 +244,13 @@
             v-if="this.articles.length >= 6"
             to="/articles"
             aria-label="A link to the articles page"
-            class="inline-block px-3 text-lg h-16 flex items-center font-bold text-white bg-gray-900 rounded-lg hover:shadow-lg transition-shadow duration-75 ease-in-out"
+            class="flex items-center inline-block h-16 px-3 text-lg font-bold text-white transition-shadow duration-75 ease-in-out bg-gray-900 rounded-lg hover:shadow-lg"
             >Read More</NuxtLink
           >
         </div>
       </div>
 
-      <h2 id="contact" class="text-2xl lg:text-4xl font-bold mt-12 lg:mt-20">
+      <h2 id="contact" class="mt-12 text-2xl font-bold lg:text-4xl lg:mt-20">
         That’s it for me - <br class="md:hidden" />
         now it’s your turn!
       </h2>
@@ -324,7 +324,7 @@ const months = [
 export default {
   async asyncData({ $content }) {
     const articles = await $content("articles")
-      .sortBy("date", "desc")
+      .sortBy("date")
       .where({ published: true })
       .only(["title", "description", "date", "featured_image", "path"])
       .fetch();
@@ -508,7 +508,7 @@ export default {
       return this.articles ? this.articles[0] : null;
     },
     otherArticles() {
-      return this.articles ? this.articles.slice(1, 5) : null;
+      return this.articles ? this.articles.slice(1, 5).reverse() : null;
     }
   },
 

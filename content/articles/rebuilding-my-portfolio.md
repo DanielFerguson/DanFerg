@@ -3,7 +3,7 @@ title: Welcome, to Website v3!
 description: Well, let’s start of with the obvious question…
 featured_image: fallon-michael-VUWDlBXGogg-unsplash.jpg
 published: true
-date: 12/23/2020
+date: Wed Dec 23 2020
 ---
 
 Well, let’s start of with the obvious question…
@@ -12,7 +12,7 @@ Well, let’s start of with the obvious question…
 
 Well, the last one was a little outdated, and lacked imagination.
 
-<img class="h-64 w-full object-cover rounded-xl shadow" src="/images/website-v2.png" />
+<img class="object-cover w-full h-64 shadow rounded-xl" src="/images/website-v2.png" />
 <em class="text-sm">The front page of the previous website</em>
 
 And was built for a different purpose. When I was building version 2 of my website, I wanted to expand my experience with web technologies.
@@ -38,7 +38,7 @@ First off, let me just get it out in the open; I am not a designer… Not that i
 
 Once I start to create a theme of what I want, I then start to flesh out what will be the first iteration of the design.
 
-<img class="w-full object-cover rounded-xl shadow" src="/images/website-v3-iteration.png" />
+<img class="object-cover w-full shadow rounded-xl" src="/images/website-v3-iteration.png" />
 <em class="text-sm">A snippet of the original Adobe XD design</em>
 
 Then it’s just a process of rinse, wash and repeat until I have something that looks like an attractive website, and in this case, something that I feel proud enough to put my name on it; quite literally.
@@ -81,10 +81,10 @@ Honestly, whatever works for you, stick with it. 👍
 
 # Finally, the scores… (🥇?)
 
-<img class="w-full object-cover rounded-xl shadow" src="/images/website-v2-scores.png" />
+<img class="object-cover w-full shadow rounded-xl" src="/images/website-v2-scores.png" />
 <em class="text-sm">The web.dev scores of the previous website</em>
 
-<img class="w-full object-cover rounded-xl shadow" src="/images/website-v3-scores.png" />
+<img class="object-cover w-full shadow rounded-xl" src="/images/website-v3-scores.png" />
 <em class="text-sm">The web.dev scores of the current website</em>
 
 Unfortunately, we didn’t beat the previous website’s scores (more like 🥈). That’s alright, room to improve! However, as I said at the start of the article, I am over the moon with how this project has turned out. Definitely went for a little longer than I would have hoped, but what should have I expected coming into the end of the year?
@@ -93,7 +93,7 @@ I look forward to the next interactions of the website. I’ll be working on inc
 
 ## Forget that nonsense, go for gold! (🥇!)
 
-<img class="w-full object-cover rounded-xl shadow" src="/images/website-v3-upgrades.png" />
+<img class="object-cover w-full shadow rounded-xl" src="/images/website-v3-upgrades.png" />
 <em class="text-sm">The web.dev scores of the latest upgrades to the website</em>
 
 I couldn't go to sleep knowing that I could do better; and did I ever! After doing some reading on both what Google gives SEO kudos to, and generally good practise for things like accessibility with aria, etc. I cracked the 100% mark!
